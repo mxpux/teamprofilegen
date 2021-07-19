@@ -39,10 +39,65 @@ function addManager (){
 addManager();
 
 function addEngineer (){
+    inquirer.prompt([
+        {
+            type: "input",
+            name: "engineerName",
+            message: "What is the engineer's name?"
+        },
+        {
+            type: "input",
+            name: "engineerId",
+            message: "What is the engineer's ID number?"
+        },
+        {
+            type: "input",
+            name: "engineerEmail",
+            message: "What is the engineer's email?"
+        },
+        {
+            type: "input",
+            name: "engineerGithub",
+            message: "What is the engineer's GitHub?"
+        }
 
+    ])
+    .then (res => {
+        const engineer = new Engineer(res.engineerName, res.engineerId, res.engineerEmail, res.engineerGithub);
+        teamArray.push(engineer)
+        crossRoad()
+    })
 }
 
 function addIntern (){
+    inquirer.prompt([
+        {
+            type: "input",
+            name: "internName",
+            message: "What is the Intern's name?"
+        },
+        {
+            type: "input",
+            name: "internId",
+            message: "What is the Intern's ID number?"
+        },
+        {
+            type: "input",
+            name: "internEmail",
+            message: "What is the Intern's email?"
+        },
+        {
+            type: "input",
+            name: "internSchool",
+            message: "What is the Intern's school?"
+        }
+
+    ])
+    .then (res => {
+        const intern = new Intern(res.internName, res.internId, res.internEmail, res.internSchool);
+        teamArray.push(intern)
+        crossRoad()
+    })
 
 }
 
