@@ -2,6 +2,7 @@ const Engineer = require('./library/Engineer')
 const Intern = require('./library/Intern')
 const Manager = require('./library/Manager')
 const inquirer = require('inquirer')
+const teamArray = [];
 
 function addManager (){
     inquirer.prompt([
@@ -29,6 +30,10 @@ function addManager (){
     ])
     .then (res => {
         console.log(res)
+        const manager = new Manager(res.managerName, res.managerId, res.managerEmail, res.managerOffice);
+
+        teamArray.push(manager)
+        crossRoad()
     })
 }
 addManager();
@@ -46,5 +51,22 @@ function buildTeam (){
 }
 
 function crossRoad (){
-
+    inquirer.prompt([
+        {
+            type: "list",
+            name: "answer",
+            message: "What team member would you like to add?",
+            choices: ["Engineer", "Intern", "All done"]
+        }
+    ])
+    .then (res => {
+        switch(res.answer){
+            case "Engineer":
+                return addEngineer();
+            case "Intern":
+                return addIntern();
+            case "All done":
+                return buildTeam();
+        }
+    })
 }
