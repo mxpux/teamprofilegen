@@ -3,6 +3,8 @@ const Intern = require('./library/Intern')
 const Manager = require('./library/Manager')
 const inquirer = require('inquirer')
 const teamArray = [];
+const teamBuilder = require('./source/template')
+const fs = require('fs');
 
 function addManager (){
     inquirer.prompt([
@@ -102,7 +104,8 @@ function addIntern (){
 }
 
 function buildTeam (){
-
+    console.log(teamArray)
+    fs.writeFileSync('team.html', teamBuilder(teamArray))
 }
 
 function crossRoad (){

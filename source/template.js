@@ -1,4 +1,71 @@
-const teamBuilder = team => {
+
+const cardBuilder = team => {
+    const managerCard = manager =>{
+        return `
+        <div class="card" style="width: 18rem;">
+    <div class="card-header">
+      <h2 class="card-title">${manager.getName()}</h2>
+      <h3 class="card-text"><i class="fas fa-mug-hot"></i> Manager</h3>
+    </div>
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item">Id: ${manager.getId()}</li>
+      <li class="list-group-item">${manager.getEmail()}</li>
+      <li class="list-group-item">${manager.getOfficeNumber()}</li>
+    </ul>
+  </div>
+        `
+    }
+    const internCard = intern =>{
+        return `
+        <div class="card" style="width: 18rem;">
+    <div class="card-header">
+      <h2 class="card-title">${intern.getName()}</h2>
+      <h3 class="card-text"><i class="fas fa-graduation-cap"></i> Intern</h3>
+    </div>
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item">Id: ${intern.getId()}</li>
+      <li class="list-group-item">${intern.getEmail()}</li>
+      <li class="list-group-item">${intern.getSchool()}</li>
+    </ul>
+  </div>
+        `
+    }
+    const engineerCard = engineer =>{
+        return `
+    <div class="card" style="width: 18rem;">
+      <div class="card-header">
+      <h2 class="card-title">${engineer.getName()}</h2>
+      <h3 class="card-text"><i class="fas fa-glasses"></i> Engineer</h3>
+    </div>
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item">Id: ${engineer.getId()}</li>
+      <li class="list-group-item">${engineer.getEmail()}</li>
+      <li class="list-group-item">${engineer.getGithub()}</li>
+    </ul>
+  </div>
+        `
+    }
+
+    const html = [];
+    for(const teamMember of team){
+        const tempRole = teamMember.getRole();
+        console.log(tempRole)
+        switch (tempRole){
+            case "Engineer":
+                 html.push(engineerCard(teamMember));
+                 break
+            case "Manager":
+                 html.push(managerCard(teamMember));
+                 break
+            case "Intern":
+                 html.push(internCard(teamMember));
+                 break
+        }
+    }
+    return html.join('')
+}
+
+module.exports = team => {
     return `
     <!DOCTYPE html>
 <html lang="en">
@@ -27,22 +94,4 @@ const teamBuilder = team => {
 </body>
 </html>
     `
-}
-
-const cardBuilder = team => {
-    const managerCard = manager =>{
-        return `
-        <div class="card" style="width: 18rem;">
-    <div class="card-header">
-      <h2 class="card-title">${manager.getName()}</h2>
-      <h3 class="card-text"><i class="fas fa-mug-hot"></i> Manager</h3>
-    </div>
-    <ul class="list-group list-group-flush">
-      <li class="list-group-item">Id: ${manager.getId()}</li>
-      <li class="list-group-item">${manager.getEmail()}</li>
-      <li class="list-group-item">${manager.getOfficeNumber()}</li>
-    </ul>
-  </div>
-        `
-    }
 }
