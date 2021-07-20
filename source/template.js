@@ -10,8 +10,8 @@ const cardBuilder = team => {
     
       <ul class="list-group list-group-flush">
       <li class="list-group-item">Id: ${manager.getId()}</li>
-      <li class="list-group-item">${manager.getEmail()}</li>
-      <li class="list-group-item">${manager.getOfficeNumber()}</li>
+      <li class="list-group-item">Email: ${manager.getEmail()}</li>
+      <li class="list-group-item">Office Number:${manager.getOfficeNumber()}</li>
       </ul>
   </div>
       `
@@ -20,14 +20,14 @@ const cardBuilder = team => {
         return `
   <div class="card shadow p-2" style="width: 18rem;">
     <div class="card-header cont">
-      <h2 class="card-title title p-right-2 p-left-2 color: lightskyblue">${intern.getName()}</h2>
+      <h2 class="card-title title p-right-2 p-left-2">${intern.getName()}</h2>
       <h4 class="card-text"><i class="fas fa-graduation-cap"></i> Intern</h4>
     </div>
     
       <ul class="list-group list-group-flush">
       <li class="list-group-item">Id: ${intern.getId()}</li>
-      <li class="list-group-item">${intern.getEmail()}</li>
-      <li class="list-group-item">${intern.getSchool()}</li>
+      <li class="list-group-item">Email: ${intern.getEmail()}</li>
+      <li class="list-group-item">School: ${intern.getSchool()}</li>
       </ul>
   </div>
       `
@@ -42,8 +42,8 @@ const cardBuilder = team => {
     
       <ul class="list-group list-group-flush">
       <li class="list-group-item">Id: ${engineer.getId()}</li>
-      <li class="list-group-item">${engineer.getEmail()}</li>
-      <li class="list-group-item">${engineer.getGithub()}</li>
+      <li class="list-group-item">Email: ${engineer.getEmail()}</li>
+      <li class="list-group-item">GitHub: ${engineer.getGithub()}</li>
       </ul>
   </div>
       `
