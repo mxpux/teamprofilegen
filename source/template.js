@@ -10,7 +10,7 @@ const cardBuilder = team => {
     
       <ul class="list-group list-group-flush">
       <li class="list-group-item"><b>Id:</b> ${manager.getId()}</li>
-      <li class="list-group-item"><b>Email:</b> <a href=#>${manager.getEmail()}</a></li>
+      <li class="list-group-item"><b>Email:</b> <a href='mailto: ${manager.getEmail()}'>${manager.getEmail()}</a></li>
       <li class="list-group-item"><b>Office Number:</b> ${manager.getOfficeNumber()}</li>
       </ul>
   </div>
@@ -26,7 +26,7 @@ const cardBuilder = team => {
     
       <ul class="list-group list-group-flush">
       <li class="list-group-item"><b>Id:</b> ${intern.getId()}</li>
-      <li class="list-group-item"><b>Email:</b> <a href=#>${intern.getEmail()}</a></li>
+      <li class="list-group-item"><b>Email:</b> <a href='mailto: ${intern.getEmail()}'>${intern.getEmail()}</a></li>
       <li class="list-group-item"><b>School:</b> ${intern.getSchool()}</li>
       </ul>
   </div>
@@ -42,8 +42,8 @@ const cardBuilder = team => {
     
       <ul class="list-group list-group-flush">
       <li class="list-group-item"><b>Id:</b> ${engineer.getId()}</li>
-      <li class="list-group-item"><b>Email:</b> <a href=#>${engineer.getEmail()}</a></li>
-      <li class="list-group-item"><b>GitHub:</b> <a href=https://www.github.com/>${engineer.getGithub()}</a></li>
+      <li class="list-group-item"><b>Email:</b> <a href='mailto: ${engineer.getEmail()}'>${engineer.getEmail()}</a></li>
+      <li class="list-group-item"><b>GitHub:</b> <a href=https://www.github.com/${engineer.getGithub()}>${engineer.getGithub()}</a></li>
       
       </ul>
   </div>
