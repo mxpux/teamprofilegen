@@ -5,7 +5,7 @@ const cardBuilder = team => {
   <div class="card shadow p-2" style="width: 18rem;">
       <div class="card-header">
         <h2 class="card-title title p-right-2 p-left-2">${manager.getName()}</h2>
-        <h4 class="card-text"><i class="fas fa-mug-hot"></i> Manager</h3>
+        <h4 class="card-text"><i class="fas fa-mug-hot"></i><class="job"> Manager</h4>
       </div>
     
       <ul class="list-group list-group-flush">
@@ -21,7 +21,7 @@ const cardBuilder = team => {
   <div class="card shadow p-2" style="width: 18rem;">
     <div class="card-header cont">
       <h2 class="card-title title p-right-2 p-left-2 color: lightskyblue">${intern.getName()}</h2>
-      <h4 class="card-text"><i class="fas fa-graduation-cap"></i> Intern</h3>
+      <h4 class="card-text"><i class="fas fa-graduation-cap"></i> Intern</h4>
     </div>
     
       <ul class="list-group list-group-flush">
@@ -37,7 +37,7 @@ const cardBuilder = team => {
   <div class="card shadow p-2" style="width: 18rem;">
     <div class="card-header">
       <h2 class="card-title title p-right-2 p-left-2">${engineer.getName()}</h2>
-      <h4 class="card-text"><i class="fas fa-glasses"></i> Engineer</h3>
+      <h4 class="card-text"><i class="fas fa-glasses"></i> Engineer</h4>
     </div>
     
       <ul class="list-group list-group-flush">
