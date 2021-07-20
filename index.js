@@ -16,17 +16,17 @@ function addManager (){
         {
             type: "input",
             name: "managerId",
-            message: "What is the manager's ID number?"
+            message: "What is the Manager's ID number?"
         },
         {
             type: "input",
             name: "managerEmail",
-            message: "What is the manager's email?"
+            message: "What is the Manager's email?"
         },
         {
             type: "input",
             name: "managerOffice",
-            message: "What is the manager's office number?"
+            message: "What is the Manager's office number?"
         }
 
     ])
@@ -45,22 +45,22 @@ function addEngineer (){
         {
             type: "input",
             name: "engineerName",
-            message: "What is the engineer's name?"
+            message: "What is the Engineer's name?"
         },
         {
             type: "input",
             name: "engineerId",
-            message: "What is the engineer's ID number?"
+            message: "What is the Engineer's ID number?"
         },
         {
             type: "input",
             name: "engineerEmail",
-            message: "What is the engineer's email?"
+            message: "What is the Engineer's email?"
         },
         {
             type: "input",
             name: "engineerGithub",
-            message: "What is the engineer's GitHub?"
+            message: "What is the Engineer's GitHub?"
         }
 
     ])
