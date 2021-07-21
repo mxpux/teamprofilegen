@@ -13,7 +13,7 @@
 ***
 > **Team Profile Generator** 
 ***
-![Screenshot of Team Profile Generator)](https://i.imgur.com/zAOiX7Z.png)
+![Screenshot of Team Profile Generator)](https://i.imgur.com/qkJVxj1.png)
 
 ***
 > **Team Profile Generator Demo**
