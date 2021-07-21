@@ -18,8 +18,9 @@
 ***
 > **Team Profile Generator Demo**
 
-![Demo of Team Profile Generator)](https://media4.giphy.com/media/AiwHFuwnZbuqqgg0nM/giphy.gif?cid=790b7611ffffaa9ea0acc1e9814e2a45a5c70f360b5b7734&rid=giphy.gif&ct=g)
-
+> Full Demo link: [**Demo of Team Profile Generator**](https://streamable.com/4ka2k2)
+***
+> Test link: [**Test Demo of Team Profile Generator**](https://streamable.com/onfdbh)
 ***
 
 > #### Coding Languages used on this project:
